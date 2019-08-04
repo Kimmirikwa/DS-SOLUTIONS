@@ -15,7 +15,7 @@ print(input_data.isnull().values.any())  # False, this dataframe does not have a
 # we need to extract a Month from a given data as we do not have month data given
 # will use this function below
 def get_month(row):
-	return row['Date'][4:]
+	return row['Date'][4:-1]
 
 # add the month column
 input_data['Month'] =  input_data.apply(lambda row: get_month(row), axis=1)
