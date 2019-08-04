@@ -27,4 +27,6 @@ input_data.drop('Date', axis=1, inplace=True)
 print(input_data.columns) # MSISDN, Network, Product, Amount, Month
 
 # Aggregation: group the data by Network and Product, assumed sum aggregation
-grouped_data = input_data.groupby(['Network', 'Product', 'Month']).sum()
+agg_data = input_data.groupby(['Network', 'Product', 'Month']).sum()
+
+agg_data.to_csv("data/output.csv")
