@@ -2,7 +2,7 @@
 ,,,sum,size
 Network,Product,Month,,
 'Network 1','Loan Product 1',Mar-2016,1000.0,1.0
-'Network 1','Loan Product 2',Apr-2016,3602.0,2.0
+'Network 1','Loan Product 2',Apr-2016,1801.0,1.0
 'Network 1','Loan Product 2',Mar-2016,3098.0,1.0
 'Network 2','Loan Product 1',Apr-2016,5671.0,1.0
 'Network 2','Loan Product 1',Mar-2016,1122.0,1.0
