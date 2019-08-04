@@ -4,7 +4,7 @@ For the problem description, kindly refer [here](https://github.com/jumo/de-publ
 The input data is in ```input.csv```. The requirement here is to aggregate the data on the ```Network```, ```Product``` and ```Month```. 
 I decided to use *Python* in this exercise. This is because Python is easy to understand and a very intuitive language. There are very many great python libraries like *Pandas*(use here!), *Numpy*, *Scipy*, *Matplotlib* and others which are very easy to use when tacking data analysis. It also quite easy to have a python script to achieve something. Python is also highly portable.
 
-I only used *Pandas* here. Pandas is very powerful and I was able to achieve a lot by using a few lines of code. It is also very efficient as it has numerious vectorized implementations. I have made many assumptions in this exercise and I have only done close to minimum requirement to do the required aggregation.
+I have used *Pandas* and *numpy* here. Pandas is very powerful and I was able to achieve a lot by using a few lines of code. It is also very efficient as it has numerious vectorized implementations. I have made many assumptions in this exercise and I have only done close to minimum requirement to do the required aggregation.
 
 The input data in this exercise was very clean. There were no missing data points too. I therefore made so many assumptions and came up with a simple solution to handle this data case. The following are some of the assumptions I had when coming up with my solution.
 
