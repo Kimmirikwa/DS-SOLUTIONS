@@ -15,4 +15,4 @@ The input data in this exercise was very clean. There were no missing data point
 - As the input file was quite small, I was able to read all the data in memory. This might not always be true as sometimes data can be quite large making it impractical to try fitting all of it memory. It is probably advisable to try reading the data in multiple chunks that can fit in memory.
 - I have also done all the processing of data in memory. If the data is too large, this can lead to memory issues. An implementation of ```Map Reduce``` for example ```Dataflow``` can definetely help here.
 
-The result of my aggregation is in ```result/Output.csv```. Unfortunately for this data, all the ```Network```, ```Product``` and ```Month``` combinations were unique and we never had 'true aggregation'.
+The result of my aggregation is in ```output/Output.csv```. Unfortunately for this data, all the ```Network```, ```Product``` and ```Month``` combinations were unique and we never had 'true aggregation'.
