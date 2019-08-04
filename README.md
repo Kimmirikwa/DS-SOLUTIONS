@@ -8,11 +8,12 @@ I only used *Pandas* here. Pandas is very powerful and I was able to achieve a l
 
 The input data in this exercise was very clean. There were no missing data points too. I therefore made so many assumptions and came up with a simple solution to handle this data case. The following are some of the assumptions I had when coming up with my solution.
 
-- I assumed that I was required to do ```sum``` aggregation.
+- I assumed that I was required to do ```sum``` aggregation for the amount.
 - I assumed that I was to group by ```Network```, then ```Product``` and finally ```Month``` as they were given in that order.
 - The input data does not have any missing values. This is a very naive assumption as we it is well known that sometimes we usually have some data missing. I can improve this by handling missing values.
 - I assumed that the columns used in aggregation had all their data points in the same case. For example, my solution treats ```Network 2``` and ```network 2``` as 2 different networks. This is definetely an issue.
-- As the input file was quite small, I was able to read all the data in memory. This might not always be true as sometimes data can be quite large making it impractical to try fitting all of it memory. It is probably advisable to try reading the data in multiple chunks that can fit in memory.
+- The function to extract month from ```Date``` assumed a constant date format
+- As the input file was quite small, I was able to read all the data in memory. This might not always be true as sometimes data can be quite large making it impractical to try fitting all of it memory. It is probably advisable to try reading the data in multiple chunks that can fit in memory. The chunks could be processed in parallel too.
 - I have also done all the processing of data in memory. If the data is too large, this can lead to memory issues. An implementation of ```Map Reduce``` for example ```Dataflow``` can definetely help here. For example, a dataflow pipeline with a read transform to get the data from the input file and a ```groupByKey``` transform and finally a write transform to write the output file can do the trick.
 
 The result of my aggregation is in ```output/Output.csv```. Unfortunately for this data, all the ```Network```, ```Product``` and ```Month``` combinations were unique and we never had 'true aggregation'.
