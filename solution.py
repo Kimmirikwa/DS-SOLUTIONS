@@ -25,3 +25,6 @@ input_data.drop('Date', axis=1, inplace=True)
 
 # the columns of the dataframe after adding 'Month' and dropping 'Date'
 print(input_data.columns) # MSISDN, Network, Product, Amount, Month
+
+# Aggregation: group the data by Network and Product, assumed sum aggregation
+grouped_data = input_data.groupby(['Network', 'Product', 'Month']).sum()
