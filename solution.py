@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 
 # dataframe of the input data
 input_data = pd.read_csv('data/input.csv')
@@ -21,12 +22,12 @@ def get_month(row):
 input_data['Month'] =  input_data.apply(lambda row: get_month(row), axis=1)
 
 # we no longer need 'Date' column in our data
-input_data.drop('Date', axis=1, inplace=True)
+input_data.drop(['Date', 'MSISDN'], axis=1, inplace=True)
 
 # the columns of the dataframe after adding 'Month' and dropping 'Date'
 print(input_data.columns) # MSISDN, Network, Product, Amount, Month
 
-# Aggregation: group the data by Network and Product, assumed sum aggregation
-agg_data = input_data.groupby(['Network', 'Product', 'Month']).sum()
+# Aggregation: group the data by Network and Product, assumed sum aggregation for amount
+agg_data = input_data.groupby(['Network', 'Product', 'Month']).agg({"Amount": [np.sum, np.size]})
 
 agg_data.to_csv("output/Output.csv")

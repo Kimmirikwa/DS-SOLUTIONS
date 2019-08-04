@@ -1,9 +1,11 @@
-Network,Product,Month,MSISDN,Amount
-'Network 1','Loan Product 1',Mar-2016,27729554427324,1000.0
-'Network 1','Loan Product 2',Apr-2016,27729554427286,1801.0
-'Network 1','Loan Product 2',Mar-2016,27725326345543,3098.0
-'Network 2','Loan Product 1',Apr-2016,27729234533453,5671.0
-'Network 2','Loan Product 1',Mar-2016,27722342551343,1122.0
-'Network 2','Loan Product 3',Apr-2016,27725678534423,1747.0
-'Network 3','Loan Product 2',Mar-2016,27725544272422,2084.0
-'Network 3','Loan Product 3',Apr-2016,27723453455453,1928.0
+,,,Amount,Amount
+,,,sum,size
+Network,Product,Month,,
+'Network 1','Loan Product 1',Mar-2016,1000.0,1.0
+'Network 1','Loan Product 2',Apr-2016,3602.0,2.0
+'Network 1','Loan Product 2',Mar-2016,3098.0,1.0
+'Network 2','Loan Product 1',Apr-2016,5671.0,1.0
+'Network 2','Loan Product 1',Mar-2016,1122.0,1.0
+'Network 2','Loan Product 3',Apr-2016,1747.0,1.0
+'Network 3','Loan Product 2',Mar-2016,2084.0,1.0
+'Network 3','Loan Product 3',Apr-2016,1928.0,1.0
